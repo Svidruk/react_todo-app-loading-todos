@@ -1,8 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React, { useEffect, useState } from 'react';
-import { UserWarning } from './components/UserWarning';
-import { getTodos, USER_ID } from './api/todos';
+import { getTodos } from './api/todos';
 import { Header } from './components/Header';
 import { TodoList } from './components/TodoList';
 import { Footer } from './components/Footer';
@@ -32,10 +31,6 @@ export const App: React.FC = () => {
         setTimeout(handleErrorReset, 3000);
       });
   }, []);
-
-  if (!USER_ID) {
-    return <UserWarning />;
-  }
 
   return (
     <div className="todoapp">
