@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import { FC, useState } from 'react';
 import { Todo } from '../../types/Todo';
 import cn from 'classnames';
@@ -8,7 +9,7 @@ interface Props {
 }
 
 export const TodoItem: FC<Props> = ({ todo, isLoading }) => {
-  const [isEdited, /*setIsEdited*/] = useState(false);
+  const [isEdited /*setIsEdited*/] = useState(false);
   const { id, title, completed } = todo;
   return (
     <div
